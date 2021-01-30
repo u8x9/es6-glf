@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>const</title>
+    </head>
+
+    <body>
+
+    </body>
+
+    <script>
+        const foo = {};
+        foo.bar = 123; //为其添加新属性，成功
+        console.log(foo.bar);
+
+        // 将foo指向新对象，失败
+        foo = {}; // Uncaught TypeError: Assignment to constant variable.
+    </script>
+
+</html>
