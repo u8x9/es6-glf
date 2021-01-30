@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ES6数组新方法</title>
+</head>
+<body>
+
+</body>
+
+<script>
+    let arr = [2, 4, 6, 8, 10];
+
+    // map
+    let narr = arr.map(item => item * 2);
+    console.log(narr);
+
+    // reduce
+    let narrReduce = arr.reduce((prev, curr, idx) => {
+        console.log("前一个值：", prev, "当前值：", curr, "索引：", idx);
+        return prev + curr;
+    });
+    console.log(narrReduce);
+
+    // filter
+    let narrFilter = arr.filter(i => i % 3 != 0);
+    console.log(narrFilter);
+
+    // forEach
+    arr.forEach((v, idx) => {
+        console.log("arr[" + idx + "] = " + v);
+    });
+
+    // some
+    let s = arr.some(i => i % 3 == 0);
+    console.log(s);
+
+    // every
+    let e = arr.every(i => i % 2 == 0);
+    console.log(e)
+</script>
+</html>
