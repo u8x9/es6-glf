@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+<script>
+    let f = v => v * v;
+    console.log(f(2));
+
+    let ff = (v, x) => v + x;
+    console.log(ff(12, 34));
+
+    let fff = (v, x) => {
+        console.log("foo.bar");
+        return v + x;
+    }
+    console.log(fff(12, 34));
+
+    // 如果箭头函数返回的是对象，必须使用()
+    let p = name => ({name: name, age: 123});
+    console.log(p("u8x"));
+
+    let values = [1, 5, 9, 3, 6, 4];
+    let result = values.sort((a, b) => b - a);
+    console.log(result);
+</script>
+</body>
+
+</html>
