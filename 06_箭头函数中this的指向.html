@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头函数中this的指向</title>
+</head>
+<body>
+
+</body>
+<script>
+    // window.r = 999;
+    // var circle = {
+    //     r:10,
+    //     printR: function(){
+    //         var ii = function (){
+    //             // console.log(this); // window
+    //             console.log(this.r);
+    //         }
+    //         ii();
+    //     }
+    // }
+    // circle.printR();
+
+    // var circle = {
+    //     r:10,
+    //     printR: function(){
+    //         var ii = function (){
+    //             console.log(this.r);
+    //         }.bind(this); // 绑定到当前对象
+    //         ii();
+    //     }
+    // }
+    // circle.printR();
+
+    var circle = {
+        r: 10,
+        printR() {
+            var ii = () => console.log(this.r);
+            ii();
+        }
+    }
+    circle.printR();
+
+    function Person(){
+        this.name = 'foo bar';
+        this.age = 188;
+
+        setInterval(()=>{
+            console.log(this);
+            console.log("我叫" + this.name + ", 今年" + this.age + "岁");
+        },10000);
+    }
+   new Person();
+</script>
+</html>
