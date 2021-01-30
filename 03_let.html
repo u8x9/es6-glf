@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>let
+        </title>
+    </head>
+
+    <body>
+
+        <button type="button">one</button>
+        <button type="button">two</button>
+        <button type="button">three</button>
+    </body>
+
+    <script>
+        window.onload = function () {
+            var buts = document.getElementsByTagName("button");
+
+            // for (var i = 0; i < buts.length; i++) {
+            //     (function (i) {
+            //         buts[i].onclick = function () {
+            //             console.log(i + 1);
+            //         }
+            //     })(i)
+
+            // }
+
+            for (let i = 0; i < buts.length; i++) {
+                buts[i].onclick = function () {
+                    console.log(i + 1);
+                }
+            }
+        }
+    </script>
+
+</html>
