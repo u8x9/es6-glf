@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的参数</title>
+</head>
+<body>
+<script>
+    let foo = [1, 3, 5, 7, 9];
+    let bar = [2, 4, 6, 8, 0];
+    let foobar = [...foo, ...bar];
+    console.log(foobar);
+
+    // function demo(a,b,c){
+    //     console.log(a,b,c);
+    // }
+    // let args = [11,22,33];
+    // demo(...args);
+
+    // function demo(a, b, ...args) {
+    //     console.log(a, b, ...args);
+    // }
+    // demo(11, 22, 33, 44, 55, 66, 77, 88, 99);
+
+    function demon(a, b = 22, c = 33) {
+        console.log(a, b, c);
+    }
+
+    demon(11);
+    demon(99, 88);
+    demon(99, 88, 77);
+</script>
+</body>
+</html>
