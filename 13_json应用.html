@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json应用</title>
+</head>
+<body>
+<script>
+    /*
+    let a = 10;
+    let b = 20;
+    let obj = {
+        a, b: b, say() {
+            console.log(this.a)
+        }
+    };
+    console.log(obj);
+    obj.say();
+     */
+
+    let obj = {a: 1, b: 2, c: 3};
+    let str = JSON.stringify(obj);
+    console.log(str);
+    let o = JSON.parse(str);
+    console.log(o);
+</script>
+</body>
+</html>
