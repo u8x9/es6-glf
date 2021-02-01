@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+<script>
+    // function Person(name,age){
+    //     this.name=name;
+    //     this.age=age;
+    // }
+    // Person.prototype.say=function (){
+    //     console.log(this.name + ", " + this.age);
+    // }
+    // let p = new Person('foobar',99);
+    // p.say();
+
+    class Person {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        say() {
+            console.log(this.name + ", " + this.age);
+        }
+    }
+    let p = new Person('foobar',99);
+    p.say();
+</script>
+</body>
+</html>
