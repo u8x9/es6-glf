@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>es6的async/await应用</title>
+</head>
+<body>
+<script>
+    /*
+    // async 修饰的函数，实际返回的是一个 Promise 对象实例
+    async function demo() {
+        console.log('你好 async');
+        return 'abc'; // 相当于调用 promise.resolve('abc');
+    }
+
+    demo().then(result => {
+        console.log(result);
+    });
+     */
+
+    function demo(num) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(num * 2);
+            }, num * 100);
+        })
+    }
+
+    async function test() {
+        let a = await demo(20); // 等待异步执行完成
+        let b = await demo(30);
+        let c = await demo(40);
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+
+    test();
+</script>
+</body>
+</html>
