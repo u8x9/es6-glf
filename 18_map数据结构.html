@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>map数据结构</title>
+</head>
+<body>
+<script>
+    // map 数据结构类似于对象，是键值对的集合，传统的键只能用字符串，MAP的键不限于字符串，各种类型的值(包括对象)都可以当作键
+    // size 属性：返回map结构的成员总数
+    // set(key, value) 方法：设置键值，并返回整个MAP结构。如果KEY存在，则覆盖已有值。
+
+    let m = new Map([['姓名', '张三'], ['性别', '女']]);
+    console.log(m, m.size);
+
+    m.set('城市', '天都')
+        .set('年龄', 99)
+        .set(123, '一二三');
+
+    for (let k of m.keys()) {
+        console.log(k, '...', m.get(k));
+    }
+    for (let kv of m.entries()) {
+        console.log(kv[0], '---', kv[1]);
+    }
+    for (let [k, v] of m.entries()) {
+        console.log(k, '***', v);
+    }
+    m.forEach((v, k, m) => {
+        console.log(k, '///', v);
+    });
+</script>
+</body>
+</html>
