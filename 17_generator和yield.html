@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>generator和yield</title>
+</head>
+<body>
+<script>
+    /*
+    function* demo() {
+        console.log(1);
+        yield;
+        console.log(2);
+        yield;
+        console.log(3);
+    }
+    let genObj = demo();
+    console.log(genObj)
+    genObj.next();
+    genObj.next();
+    genObj.next();
+     */
+
+    /*function* demo() {
+        console.log(1);
+        let a = yield;
+        console.log(a);
+        let b = yield;
+        console.log(b);
+    }
+    let genObj = demo();
+    genObj.next(111);
+    genObj.next(222);
+    genObj.next(333);*/
+
+    function* demo() {
+        console.log(1);
+        let a = yield '甲';
+        console.log(a);
+        let b = yield '乙';
+        console.log(b);
+    }
+
+    let genObj = demo();
+    let a = genObj.next(111);
+    let b = genObj.next(222);
+    let c = genObj.next(333);
+    console.log(a, b, c);
+</script>
+</body>
+</html>
